@@ -1,9 +1,13 @@
 <?php
 
-include_once "./functions.php"
+session_start();
+            
+if (isset($_GET["password-length"])) {
+    $_SESSION["password"] = $_GET["password-length"];
+    header("Location: ./result.php");
+} 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +23,7 @@ include_once "./functions.php"
         <h1>Strong Password Generator</h1>
         <h2>Genera una password sicura</h2>
     </header>
+    <main>
     <section>
         <form action="" method="GET">
             <label for="password-length">Lunghezza password</label>
@@ -28,8 +33,8 @@ include_once "./functions.php"
 
         </form>
     </section>
+    </main>
 
-    <h1>La tua password sicura è: <?php echo passwordGenerator() ?></h1>
 </body>
 
 </html>
