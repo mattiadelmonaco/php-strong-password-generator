@@ -1,17 +1,19 @@
 <?php
 
+// inizializzo la sessione
 session_start();
-            
+
+// se la lunghezza della password è settata (dopo il submit) inserisco tutti i campi get nelle sessioni 
 if (isset($_GET["password-length"])) {
     $_SESSION["password"] = $_GET["password-length"];
 
-    $_SESSION["uppercase"] = isset($_GET["uppercase"]) ? true : false;
+    $_SESSION["uppercase"] = isset($_GET["uppercase"]) ? true : false; // valori false in caso non vengono spuntate le checkboxx
     $_SESSION["lowercase"] = isset($_GET["lowercase"]) ? true : false;
     $_SESSION["numbers"] = isset($_GET["numbers"]) ? true : false;
     $_SESSION["symbols"] = isset($_GET["symbols"]) ? true : false;
 
-    header("Location: ./result.php");
-    exit();
+    header("Location: ./result.php"); //rimando a pagina risultato
+    exit(); //interrompe esecuzione script dopo il redirect
 } 
 
 ?>
@@ -23,6 +25,9 @@ if (isset($_GET["password-length"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strong Password Generator</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- /BOOTSTRAP -->
 </head>
 
 <body>
