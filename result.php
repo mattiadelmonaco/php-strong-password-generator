@@ -14,6 +14,8 @@ include "./functions.php"
 <body>
     <main>
     <h1>La tua password sicura è: <?php echo passwordGenerator() ?></h1>
+<a href="index.php">Torna indietro</a>
+<a href="result.php">Genera nuova password</a>
 
     </main>
 </body>
