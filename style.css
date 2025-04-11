@@ -1,3 +1,28 @@
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #01304f;
+}
+
+form,
+#result-main {
+  background-color: rgb(231, 231, 231);
+}
+
+.ms-btn {
+  background-color: rgb(68, 153, 53);
+}
+
+.ms-btn:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.ms-a {
+  background-color: rgb(203, 206, 206);
+  transition: 0.4s;
+}
+
+.ms-a:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
 }

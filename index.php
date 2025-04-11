@@ -41,31 +41,43 @@ if (isset($_GET["password-length"])) {
 </head>
 
 <body>
-    <header>
-        <h1>Strong Password Generator</h1>
-        <h2>Genera una password sicura</h2>
+    <header class="text-center text-white">
+        <h1 class="my-3">STRONG PASSWORD GENERATOR</h1>
     </header>
     <main>
-    <section>
-        <form action="" method="GET">
-            <label for="password-length">Lunghezza password</label>
+    <section class="container mt-4">
+    <h2 class="mb-4 text-center text-white">Genera una password sicura</h2>
+
+        <form action="" method="GET" class="d-flex flex-column mx-auto align-items-center p-3 rounded-4 w-75">
+            <div class="d-flex align-items-center gap-1">
+            <p class="mt-3">Lunghezza password:</p>
             <input id="password-length" name="password-length" type="number" min="5" max="15" required>
+            <p class="mt-3">caratteri</p>
+            </div>
 
             <p>Seleziona quali tipi di carattere devono essere presenti nella password</p>
 
+            <div class="d-flex align-items-center gap-2 mb-2 bg-white py-1 px-2 rounded-2">
             <label for="uppercase">Lettere maiuscole</label>
-            <input id="uppercase" name="uppercase" type="checkbox">
+            <input id="uppercase" name="uppercase" type="checkbox" checked>
+            </div>
 
+            <div class="d-flex align-items-center gap-2 mb-2 bg-white py-1 px-2 rounded-2">
             <label for="lowercase">Lettere minuscole</label>
-            <input id="lowercase" name="lowercase" type="checkbox">
+            <input id="lowercase" name="lowercase" type="checkbox" checked>
+            </div>
 
+            <div class="d-flex align-items-center gap-2 mb-2 bg-white py-1 px-2 rounded-2">
             <label for="numbers">Numeri</label>
-            <input id="numbers" name="numbers" type="checkbox">
+            <input id="numbers" name="numbers" type="checkbox" checked>
+            </div>
 
+            <div class="d-flex align-items-center gap-2 bg-white py-1 px-2 rounded-2">
             <label for="symbols">Simboli</label>
-            <input id="symbols" name="symbols" type="checkbox">
+            <input id="symbols" name="symbols" type="checkbox" checked>
+            </div>
 
-            <button type="submit">Genera</button>
+            <button type="submit" class="ms-btn border-0 mt-4 py-2 px-5 mx-auto rounded-3 fw-semibold text-white">Genera</button>
 
         </form>
     </section>

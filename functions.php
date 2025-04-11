@@ -17,7 +17,7 @@ function passwordGenerator() {
 
     // controllo se nessuna checkbox è stata selezionata
     if (!$upperCaseOn && !$lowerCaseOn && !$numbersOn && !$symbolsOn) {
-        return "Errore: nessuna tipologia di carattere inserita. Riprova";
+        return "<span class='text-danger fs-3'>Errore: nessuna tipologia di carattere inserita. Riprova</span>";
     }
 
     $password = "";

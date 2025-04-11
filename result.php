@@ -25,11 +25,21 @@ include "./functions.php"; //importo il file functions.php
 
 </head>
 <body>
-    <main>
-        <!-- passwordGenerator è la funzione importata da functions.php -->
-    <h1>La tua password sicura è: <?php echo passwordGenerator() ?></h1> 
-<a href="index.php"><i class="fa-regular fa-circle-left"></i>Torna indietro</a>
-<a href="result.php">Genera nuova password</a>
+    <header class="text-center text-white">
+        <h1 class="my-3">STRONG PASSWORD GENERATOR</h1>
+    </header>
+
+    <main id="result-main" class="mx-auto align-items-center p-3 rounded-4 w-75">
+        <div class="d-flex flex-column align-items-center">
+            <h2>La tua password sicura è: </h2>
+            <!-- passwordGenerator è la funzione importata da functions.php -->
+            <p class="fs-1 fw-semibold text-success"><?php echo passwordGenerator() ?></p> 
+        </div>
+
+    <div class="d-flex justify-content-around gap-2">
+        <a href="index.php" class=" ms-a link-dark text-decoration-none p-2 rounded-2"><i class="fa-regular fa-circle-left"></i> Torna indietro</a>
+        <a href="result.php" class=" ms-a link-dark text-decoration-none p-2 rounded-2">Genera nuova password</a>
+    </div>
 
     </main>
 </body>
