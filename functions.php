@@ -23,13 +23,13 @@ function passwordGenerator() {
     $password = "";
     $i = 0; //valore iniziale indice del ciclo
 
-    while($i < $passwordLength) {
+    while($i < $passwordLength) { //ciclo while per evitare spazi vuoti sui caratteri non selezionati
         $randomChar = rand(1,4); // 1 = numero, 2 = minuscola, 3 = maiuscola, 4 = set di simboli
 
         if ($randomChar === 1 && $numbersOn) {
             $char = rand(0,9);
         } else if ($randomChar === 2 && $lowerCaseOn) {
-            $char = chr(rand(97, 122));
+            $char = chr(rand(97, 122)); //chr() è la funzione che restituisce un carattere ascii in base al numero messo tra parentesi
         } else if ($randomChar === 3 && $upperCaseOn) {
             $char = chr(rand(65, 90));
         } else if ($randomChar === 4 && $symbolsOn) {
